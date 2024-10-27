@@ -22,6 +22,12 @@
     min-height: 100%;
     flex: 1;
     max-width: 400px;
+
+    @include onDesctop {
+      display: flex;
+      flex-direction: column;
+    }
+
   }
 
   &__image-box {
@@ -32,6 +38,11 @@
   &__info-box {
     display: flex;
     flex-direction: column;
+
+    @include onDesctop {
+      flex-grow: 1;
+    }
+    
   }
 
   &__image {
@@ -69,5 +80,10 @@
     font-size: 16px;
     line-height: 140%;
     color: $mainDarkColor;
+    
+    @include onDesctop {
+      display: flex;
+      align-items: flex-end;
+    }
   }
 }
